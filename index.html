@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dash</title>
+    <style>
+      :root {
+        --primary-color: #0366d6;
+        --background-color: #f6f8fa;
+        --card-background: #ffffff;
+        --text-color: #24292e;
+        --border-color: #e1e4e8;
+        --secondary-text: #586069;
+        --hover-color: #24292e;
+        --card-shadow: none;
+        --hover-shadow: none;
+      }
+
+      [data-theme="dark"] {
+        --primary-color: #58a6ff;
+        --background-color: #0d1117;
+        --card-background: #161b22;
+        --text-color: #c9d1d9;
+        --border-color: #30363d;
+        --secondary-text: #8b949e;
+        --hover-color: var(--primary-color);
+        --hover-shadow: rgba(82, 82, 82, 0.2);
+      }
+
+      * {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      body {
+        font-family: "JetBrains Mono", "Fira Code", "Cascadia Code",
+          "Source Code Pro", Consolas, monospace;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 1rem;
+      }
+
+      h1 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      h1::before {
+        content: "~/";
+        opacity: 0.7;
+      }
+
+      .theme-switch {
+        background: none;
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .theme-switch:hover {
+        background-color: var(--background-color);
+      }
+
+      .sites-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .site-item {
+        padding: 0;
+        height: 100%;
+        border: 2px solid var(--border-color);
+        border-radius: 6px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+        position: relative;
+        transform-origin: center;
+      }
+
+      .site-item:hover {
+        transform: scale(1.005);
+        border-color: var(--hover-color);
+      }
+
+      .site-item:hover .site-title {
+        color: var(--hover-color);
+      }
+
+      .site-item a {
+        color: var(--primary-color);
+        text-decoration: none;
+        padding: 1.5rem;
+        display: block;
+        height: 100%;
+      }
+
+      .site-title {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+      }
+
+      .site-title:hover {
+        text-decoration: none;
+      }
+
+      .site-description {
+        margin-top: 0.5rem;
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .sites-list {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .header {
+          flex-direction: column;
+          gap: 1rem;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>dash</h1>
+        <button class="theme-switch" onclick="toggleTheme()">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-text">Toggle Theme</span>
+        </button>
+      </div>
+      <ul class="sites-list">
+        <li class="site-item">
+          <a href="https://svg.okshaun.com/">
+            <div class="site-title">SVG Playground</div>
+            <div class="site-description">
+              A tool for creating and editing SVG paths with live preview and
+              code output
+            </div>
+          </a>
+        </li>
+        <li class="site-item">
+          <a href="https://okshaun.com/switch-swatch/">
+            <div class="site-title">Switch Swatch</div>
+            <div class="site-description">
+              Track your Nintendo Switch game collection and wishlist with cover
+              art and sorting options
+            </div>
+          </a>
+        </li>
+        <li class="site-item">
+          <a href="https://okshaun.com/bible-reading-plan/2025-01-29">
+            <div class="site-title">Bible Reading Plan</div>
+            <div class="site-description">
+              Generate a chronological Bible reading plan with daily chapters
+              and estimated reading times
+            </div>
+          </a>
+        </li>
+        <li class="site-item">
+          <a href="https://shaunfoxphoto.com/">
+            <div class="site-title">Photography Portfolio</div>
+            <div class="site-description">
+              Gallery of landscape, wildlife, and travel photography from around
+              the world
+            </div>
+          </a>
+        </li>
+        <li class="site-item">
+          <a href="https://okshaun.com/hito/">
+            <div class="site-title">Hito</div>
+            <div class="site-description">
+              Flashcard-based Japanese vocabulary learning tool with kanji
+              stroke order animations
+            </div>
+          </a>
+        </li>
+        <li class="site-item">
+          <a href="https://okshaun.com/old/">
+            <div class="site-title">Archive</div>
+            <div class="site-description">
+              Historical archive of past projects including early photography
+              and web experiments
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const themeIcon = document.querySelector(".theme-icon");
+        const currentTheme = html.getAttribute("data-theme");
+
+        if (currentTheme === "dark") {
+          html.removeAttribute("data-theme");
+          themeIcon.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          themeIcon.textContent = "☀️";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.querySelector(".theme-icon").textContent = "☀️";
+      }
+
+      // Check system preference on first visit
+      if (
+        !savedTheme &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.querySelector(".theme-icon").textContent = "☀️";
+      }
+    </script>
+  </body>
+</html>
