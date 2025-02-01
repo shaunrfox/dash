@@ -1,0 +1,32 @@
+[
+  {
+    "name": "SVG Playground",
+    "url": "https://svg.okshaun.com/",
+    "description": "Configurable SVG pattern generator with live preview"
+  },
+  {
+    "name": "Switch Swatch",
+    "url": "https://okshaun.com/switch-swatch/",
+    "description": "Generate N number of swatches based on a set of user-defined starting colors"
+  },
+  {
+    "name": "Bible Reading Plan",
+    "url": "https://okshaun.com/bible-reading-plan/",
+    "description": "Daily Scripture readings from the 2019 Daily Office"
+  },
+  {
+    "name": "Shaun Fox Photos",
+    "url": "https://shaunfoxphoto.com/",
+    "description": "A collection of some of my favorite photographs"
+  },
+  {
+    "name": "Hito",
+    "url": "https://okshaun.com/hito/",
+    "description": "Generator based on a type of sashiko stitching made up of small straight stitches, called Hitomezashi."
+  },
+  {
+    "name": "Old",
+    "url": "https://okshaun.com/old/",
+    "description": "My 2015 design portfolio – a collection of past projects, photography, and web experiments"
+  }
+]
