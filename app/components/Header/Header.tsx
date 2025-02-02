@@ -2,11 +2,10 @@ import { headerStyles, titleStyles, themeSwitchStyles } from './headerStyles';
 import { css } from '@styled-system/css';
 
 type HeaderProps = {
-  theme: string;
   onThemeToggle: () => void;
 };
 
-export const Header = ({ theme, onThemeToggle }: HeaderProps) => {
+export const Header = ({ onThemeToggle }: HeaderProps) => {
   return (
     <div className={headerStyles}>
       <h1 className={titleStyles}>

@@ -1,10 +1,9 @@
 .DS_Store
 /node_modules/
 
-# React Router
-/.react-router/
-/build/
-
 ## Panda
 styled-system
 styled-system-studio
+
+# Vite
+/dist/

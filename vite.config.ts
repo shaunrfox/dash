@@ -4,6 +4,7 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 
 export default defineConfig({
+  base: '/dash/',
   plugins: [
     react(),
     dts({
@@ -24,7 +25,8 @@ export default defineConfig({
   root: '.',
   publicDir: 'public',
   build: {
-    ssr: false,
     outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
   },
 });
