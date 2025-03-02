@@ -9,10 +9,9 @@ const sitesListStyles = css({
   listStyle: 'none',
   padding: '0',
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
   gap: '1.5rem',
   '@media (maxWidth: 600px)': {
-    gridTemplateColumns: '1fr',
     gap: '1rem',
   },
 });
@@ -38,9 +37,7 @@ export function App() {
       <main>
         <ul className={sitesListStyles}>
           {links.map((site: Site) => (
-            <li key={site.url}>
-              <SiteLink site={site} />
-            </li>
+            <SiteLink site={site} key={site.url} />
           ))}
         </ul>
       </main>
