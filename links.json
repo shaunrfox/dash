@@ -1,7 +1,12 @@
 [
   {
+    "name": "peeel",
+    "url": "https://peeel.app/",
+    "description": "Local-first, offline-capable note-taking and knowledge management"
+  },
+  {
     "name": "SVG Playground",
-    "url": "https://svg.shaunfox.com/",
+    "url": "https://svg-patterns-psi.vercel.app/",
     "description": "Configurable SVG pattern generator with live preview"
   },
   {
@@ -10,19 +15,34 @@
     "description": "Generate N number of swatches based on a set of user-defined starting colors"
   },
   {
+    "name": "Flexo",
+    "url": "https://shaunfox.com/flexo/",
+    "description": "Enter a URL to view your site at multiple widths at once"
+  },
+  {
     "name": "Bible Reading Plan",
     "url": "https://shaunfox.com/bible-reading-plan/",
     "description": "Daily Scripture readings from the 2019 Daily Office"
   },
   {
-    "name": "Shaun Fox Photos",
-    "url": "https://shaunfoxphoto.com/",
-    "description": "A collection of some of my favorite photographs"
-  },
-  {
     "name": "Hito",
     "url": "https://shaunfox.com/hito/",
     "description": "Generator based on a type of sashiko stitching made up of small straight stitches, called Hitomezashi."
+  },
+  {
+    "name": "okshaun components",
+    "url": "https://shaunfox.com/okshaun-components",
+    "description": "A collection of UI components built with React, Typescript, and Panda CSS"
+  },
+  {
+    "name": "Mockingbird Arts",
+    "url": "https://mkbd.org",
+    "description": "A nonprofit serving artists and the people of Austin. Coming soon."
+  },
+  {
+    "name": "Shaun Fox Photos",
+    "url": "https://shaunfoxphoto.com/",
+    "description": "A collection of some of my favorite photographs"
   },
   {
     "name": "Old",
