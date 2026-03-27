@@ -1,4 +1,5 @@
-import { Site } from '../../types';
+import type { Site } from '../../types';
+
 import {
   siteItemStyles,
   linkStyles,

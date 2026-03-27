@@ -1,6 +1,7 @@
 import { defineConfig } from '@pandacss/dev';
 import { tokens } from './app/styles/tokens';
 import { globalCss } from './app/styles/globalStyle';
+import { keyframes } from './app/styles/keyframes';
 
 export default defineConfig({
   // Whether to use css reset
@@ -16,6 +17,7 @@ export default defineConfig({
   theme: {
     extend: {
       tokens,
+      keyframes,
     },
   },
 

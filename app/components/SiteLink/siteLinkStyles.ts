@@ -10,8 +10,25 @@ export const siteItemStyles = css({
   position: 'relative',
   transformOrigin: 'center',
   transition: 'all 0.3s ease',
+
   _hover: {
     transform: 'scale(1.025)',
+    animation: {
+      base: 'pulseGlowBlue 2s infinite alternate',
+      _dark: 'pulseGlowPink 2s infinite alternate',
+    },
+    // boxShadow: {
+    //   base: `
+    //     0 0 4px token(colors.blue.500),
+    //     0 0 8px token(colors.blue.500),
+    //     0 0 16px token(colors.blue.500)
+    //     `,
+    //   _dark: `
+    //     0 0 4px token(colors.pink.500),
+    //     0 0 8px token(colors.pink.500),
+    //     0 0 16px token(colors.pink.500)
+    //     `,
+    // },
   },
 });
 

@@ -25,6 +25,38 @@ export const keyframes = {
       animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
     },
   },
+  pulseGlowPink: {
+    from: {
+      boxShadow: `
+        0 0 4px var(--colors-pink-500),
+        0 0 8px var(--colors-pink-500),
+        0 0 16px var(--colors-pink-500)
+        `,
+    },
+    to: {
+      boxShadow: `
+        0 0 8px var(--colors-pink-500),
+        0 0 16px var(--colors-pink-500),
+        0 0 32px var(--colors-pink-500)
+        `,
+    },
+  },
+  pulseGlowBlue: {
+    from: {
+      boxShadow: `
+        0 0 4px var(--colors-blue-500),
+        0 0 8px var(--colors-blue-500),
+        0 0 16px var(--colors-blue-500)
+        `,
+    },
+    to: {
+      boxShadow: `
+        0 0 8px var(--colors-blue-500),
+        0 0 16px var(--colors-blue-500),
+        0 0 32px var(--colors-blue-500)
+        `,
+    },
+  },
 };
 
 export const animations = {
